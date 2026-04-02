@@ -1,0 +1,177 @@
+[
+    {
+        "date": "11/03/2026",
+        "results": [
+            {
+                "name": "Jerem",
+                "rank": null,
+                "gain": 0.0
+            },
+            {
+                "name": "Nico",
+                "rank": null,
+                "gain": 0.0
+            },
+            {
+                "name": "Christophe",
+                "rank": 8,
+                "gain": 10.5
+            },
+            {
+                "name": "Rich",
+                "rank": null,
+                "gain": 0.0
+            }
+        ]
+    },
+    {
+        "date": "14/03/2026",
+        "results": [
+            {
+                "name": "Jerem",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Nico",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Christophe",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Rich",
+                "rank": null,
+                "gain": 0
+            }
+        ]
+    },
+    {
+        "date": "18/03/2026",
+        "results": [
+            {
+                "name": "Jerem",
+                "rank": null,
+                "gain": 0.0
+            },
+            {
+                "name": "Nico",
+                "rank": null,
+                "gain": 0.0
+            },
+            {
+                "name": "Christophe",
+                "rank": null,
+                "gain": 0.0
+            },
+            {
+                "name": "Rich",
+                "rank": 8,
+                "gain": 13.1
+            }
+        ]
+    },
+    {
+        "date": "21/03/2026",
+        "results": [
+            {
+                "name": "Jerem",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Nico",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Christophe",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Rich",
+                "rank": null,
+                "gain": 0
+            }
+        ]
+    },
+    {
+        "date": "25/03/2026",
+        "results": [
+            {
+                "name": "Jerem",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Nico",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Christophe",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Rich",
+                "rank": null,
+                "gain": 0
+            }
+        ]
+    },
+    {
+        "date": "28/03/2026",
+        "results": [
+            {
+                "name": "Jerem",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Nico",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Christophe",
+                "rank": null,
+                "gain": 0
+            },
+            {
+                "name": "Rich",
+                "rank": null,
+                "gain": 0
+            }
+        ]
+    },
+    {
+        "date": "01/04/2026",
+        "results": [
+            {
+                "name": "Jerem",
+                "rank": 9,
+                "gain": 6.0
+            },
+            {
+                "name": "Nico",
+                "rank": 9,
+                "gain": 6.0
+            },
+            {
+                "name": "Christophe",
+                "rank": null,
+                "gain": 0.0
+            },
+            {
+                "name": "Rich",
+                "rank": null,
+                "gain": 0.0
+            }
+        ]
+    }
+]

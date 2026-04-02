@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3 class="mb-3">Récapitulatif</h3>
+
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <p><strong>Total des mises :</strong> {{ total_mises }} €</p>
+        <p><strong>Total des gains :</strong> {{ total_gains }} €</p>
+        <p class="fw-bold {% if solde >= 0 %}text-success{% else %}text-danger{% endif %}">
+            Solde : {{ solde }} €
+        </p>
+    </div>
+</div>
+
+{% endblock %}

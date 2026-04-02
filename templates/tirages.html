@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3 class="mb-3">Tirages</h3>
+
+{% for t in tirages|reverse %}
+<div class="card shadow-sm mb-3">
+    <div class="card-body">
+        <h5 class="card-title">{{ t.date }}</h5>
+
+        <ul class="list-group mb-3">
+            {% for r in t.results %}
+            <li class="list-group-item d-flex justify-content-between">
+                <span>{{ r.name }}</span>
+                <span class="badge bg-primary">Rang {{ r.rank if r.rank else '-' }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <a href="/gains/{{ t.date }}" class="btn btn-success w-100">Saisir les gains</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
