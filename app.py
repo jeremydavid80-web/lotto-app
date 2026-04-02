@@ -68,6 +68,22 @@ def get_rank(matches, bonus_match):
 def home():
     return render_template("index.html", players=PLAYERS, active="home")
 
+@app.route('/')
+def index():
+    total_gains = sum(g['gain'] for g in gains_data)
+    total_mises = sum(m['mise'] for m in mises_data)
+
+    best = max(gains_data, key=lambda x: x['gain'])
+    best_player = best['nom']
+
+    return render_template(
+        "index.html",
+        total_gains=total_gains,
+        total_mises=total_mises,
+        best_player=best_player
+    )
+
+
 @app.route("/tirages")
 def tirages():
     return render_template("tirages.html", tirages=data, active="tirages")
