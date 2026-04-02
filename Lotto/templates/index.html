@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% set active = "home" %}
+{% block content %}
+
+<h2 class="text-center mb-4">Les Futurs Millionnaires 💸</h2>
+
+<!-- Carte Tirages -->
+<div class="card shadow-sm mb-3">
+    <div class="card-body text-center">
+        <h5 class="card-title">Tirages</h5>
+        <p class="text-muted small">Consulte ou ajoute un tirage</p>
+        <a href="/tirages" class="btn btn-primary w-100 mb-2">Voir les tirages</a>
+        <a href="/add_tirage" class="btn btn-warning w-100">Ajouter un tirage</a>
+    </div>
+</div>
+
+<!-- Carte Mises -->
+<div class="card shadow-sm mb-3">
+    <div class="card-body text-center">
+        <h5 class="card-title">Mises</h5>
+        <p class="text-muted small">Ajoute ou consulte les mises</p>
+        <a href="/mises" class="btn btn-success w-100">Gérer les mises</a>
+    </div>
+</div>
+
+<!-- Carte Récap -->
+<div class="card shadow-sm">
+    <div class="card-body text-center">
+        <h5 class="card-title">Récapitulatif</h5>
+        <p class="text-muted small">Solde, gains, mises</p>
+        <a href="/recap" class="btn btn-dark w-100">Voir le récap</a>
+    </div>
+</div>
+
+{% endblock %}
