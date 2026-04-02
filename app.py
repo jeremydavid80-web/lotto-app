@@ -72,23 +72,35 @@ def home():
 def index():
     import json
 
-    # Charger les gains
-    with open('lotto_results.json', 'r') as f:
-        gains_data = json.load(f)
-
-    # Charger les mises
+    # Charger les mises (dictionnaire)
     with open('mises.json', 'r') as f:
         mises_data = json.load(f)
 
-    # Total des gains
-    total_gains = sum(item["gain"] for item in gains_data)
-
     # Total des mises
-    total_mises = sum(item["mise"] for item in mises_data)
+    total_mises = sum(mises_data.values())
+
+    # Charger les résultats du loto (liste de tirages)
+    with open('lotto_results.json', 'r') as f:
+        results_data = json.load(f)
+
+    # Calcul des gains cumulés par joueur
+    gains_par_joueur = {}
+
+    for tirage in results_data:
+        for entry in tirage["results"]:
+            nom = entry["name"]
+            gain = entry["gain"]
+
+            if nom not in gains_par_joueur:
+                gains_par_joueur[nom] = 0
+
+            gains_par_joueur[nom] += gain
+
+    # Total des gains
+    total_gains = sum(gains_par_joueur.values())
 
     # Meilleur joueur
-    best = max(gains_data, key=lambda x: x["gain"])
-    best_player = best["nom"]
+    best_player = max(gains_par_joueur, key=gains_par_joueur.get)
 
     return render_template(
         "index.html",
