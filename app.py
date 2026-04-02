@@ -83,6 +83,24 @@ def index():
         best_player=best_player
     )
 
+@app.route('/')
+def index():
+    # Total des gains
+    total_gains = sum(item["gain"] for item in gains_data)
+
+    # Total des mises
+    total_mises = sum(item["mise"] for item in mises_data)
+
+    # Meilleur joueur (celui qui a le plus gros gain)
+    best = max(gains_data, key=lambda x: x["gain"])
+    best_player = best["nom"]
+
+    return render_template(
+        "index.html",
+        total_gains=total_gains,
+        total_mises=total_mises,
+        best_player=best_player
+    )
 
 @app.route("/tirages")
 def tirages():
