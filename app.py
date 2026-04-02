@@ -68,16 +68,22 @@ def get_rank(matches, bonus_match):
 def home():
     return render_template("index.html", players=PLAYERS, active="home")
 
-
 @app.route('/')
 def index():
+    # Charger les données
+    with open('lotto_results.json', 'r') as f:
+        gains_data = json.load(f)
+
+    with open('mises.json', 'r') as f:
+        mises_data = json.load(f)
+
     # Total des gains
     total_gains = sum(item["gain"] for item in gains_data)
 
     # Total des mises
     total_mises = sum(item["mise"] for item in mises_data)
 
-    # Meilleur joueur (celui qui a le plus gros gain)
+    # Meilleur joueur
     best = max(gains_data, key=lambda x: x["gain"])
     best_player = best["nom"]
 
@@ -87,6 +93,8 @@ def index():
         total_mises=total_mises,
         best_player=best_player
     )
+
+
 
 @app.route("/tirages")
 def tirages():
