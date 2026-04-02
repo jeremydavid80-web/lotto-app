@@ -70,10 +70,13 @@ def home():
 
 @app.route('/')
 def index():
-    # Charger les données
+    import json
+
+    # Charger les gains
     with open('lotto_results.json', 'r') as f:
         gains_data = json.load(f)
 
+    # Charger les mises
     with open('mises.json', 'r') as f:
         mises_data = json.load(f)
 
@@ -93,6 +96,7 @@ def index():
         total_mises=total_mises,
         best_player=best_player
     )
+
 
 
 
